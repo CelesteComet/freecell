@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Free Cell</title>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+  <script type="module" src="main.js"></script>
+  <style type="text/css">
+
+    body {
+      background-color: #009900; 
+    }
+
+    .free-cells {
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+
+    .free-cell {
+      width: 12.5%;
+      height: 160px;
+      float: left;
+      box-sizing: border-box;
+      border: 3px solid black;
+    }
+
+    .foundation {
+      width: 12.5%;
+      height: 160px;
+      float: left;
+      box-sizing: border-box;
+      border: 3px solid black;
+    }
+
+    .free-cell {
+      padding-left: 25px;
+    }
+
+    .cards-container {
+    }
+
+    .pile {
+      min-height: 500px;
+      float: left;
+      width: 116px;
+      box-sizing: border-box;
+      margin-right: 20px;
+      position: relative;
+    }
+
+    .card {
+      height: 169px;
+      background: url("./cards.png");
+      background-size: 1500px;
+      width: 116px;
+      position: absolute;
+    }
+
+    .clearfix {
+      clear: both;
+      display: block;
+    }
+
+    .is-dragging {
+      z-index: 300;
+    }
+
+    .clubs { background-position-y: 0px } 
+    .diamonds { background-position-y: -167px; }
+    .hearts { background-position-y: -334px; }
+    .spades { background-position-y: -501px; }
+
+    div[val='2'] { background-position-x: -115px; }
+    div[val='3'] { background-position-x: -230px; }
+    div[val='4'] { background-position-x: -345px; }
+    div[val='5'] { background-position-x: -460px; }
+    div[val='6'] { background-position-x: -575px; }
+    div[val='7'] { background-position-x: -690px; }
+    div[val='8'] { background-position-x: -805px; }
+    div[val='9'] { background-position-x: -922px; }
+    div[val='10'] { background-position-x: -1037px; }
+    div[val='11'] { background-position-x: -1152px; }
+    div[val='12'] { background-position-x: -1267px; }
+    div[val='13'] { background-position-x: -1382px; }
+
+
+  </style>
+</head>
+<body>
+  <header></header>
+  <div class="free-cells">
+    <div class="free-cell" idx="8"></div>
+    <div class="free-cell" idx="9"></div>
+    <div class="free-cell" idx="10"></div>
+    <div class="free-cell" idx="11"></div>
+    <div class="foundation" idx="12"></div>
+    <div class="foundation" idx="13"></div>
+    <div class="foundation" idx="14"></div>
+    <div class="foundation" idx="15"></div>
+  </div>
+  <div class="cards-container">
+    <div class="pile" idx="0"></div>
+    <div class="pile" idx="1"></div>
+    <div class="pile" idx="2"></div>
+    <div class="pile" idx="3"></div>
+    <div class="pile" idx="4"></div>
+    <div class="pile" idx="5"></div>
+    <div class="pile" idx="6"></div>
+    <div class="pile" idx="7"></div>
+    <div class="clearfix"> </div>
+  </div>
+
+
+</body>
+</html>
